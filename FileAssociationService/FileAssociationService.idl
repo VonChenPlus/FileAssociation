@@ -1,0 +1,23 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[object, uuid(08B930B7-493E-4AFD-8B67-C70B97D894B1), oleautomation, helpstring("FileAssociation Helper Interface")]
+interface IFileAssociationHelper : IUnknown
+{
+    HRESULT OpenHelperDialog([in] BSTR filepath);
+    HRESULT SearchFromLocal([in] BSTR filepath);
+    HRESULT SearchFromWeb([in] BSTR fileext);
+}
+
+[uuid(C07DAF7C-F96B-42ED-BFD8-B58CCE60D8EC), version(1.0), helpstring("FileAssociatioHelper Service")]
+library FileAssociatioHelperService
+{
+    importlib("stdole32.tlb");
+    importlib("stdole2.tlb");
+
+    [uuid(C22B6E81-1432-4DAF-9B98-4C8AEA2F8ACF), helpstring("FileAssociation Helper Class"), appobject]
+    coclass FileAssociationHelper
+    {
+        [default] interface IFileAssociationHelper;
+    };
+};

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="APIHook">
+      <UniqueIdentifier>{6517bd22-3e95-4756-a756-7db07b6563a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ComUtils">
+      <UniqueIdentifier>{bf6d79b5-c19c-4e72-bcee-22ed8057dbf4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="APIHook\hde64.cpp">
+      <Filter>APIHook</Filter>
+    </ClCompile>
+    <ClCompile Include="APIHook\Hook32.cpp">
+      <Filter>APIHook</Filter>
+    </ClCompile>
+    <ClCompile Include="APIHook\Hook64.cpp">
+      <Filter>APIHook</Filter>
+    </ClCompile>
+    <ClCompile Include="ComUtils\ServiceRegistration.cpp">
+      <Filter>ComUtils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="APIHook\hde64.h">
+      <Filter>APIHook</Filter>
+    </ClInclude>
+    <ClInclude Include="APIHook\Hook.h">
+      <Filter>APIHook</Filter>
+    </ClInclude>
+    <ClInclude Include="APIHook\table64.h">
+      <Filter>APIHook</Filter>
+    </ClInclude>
+    <ClInclude Include="ComUtils\ComObject.h">
+      <Filter>ComUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="ComUtils\ComFactory.h">
+      <Filter>ComUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="ComUtils\ServiceRegistration.h">
+      <Filter>ComUtils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

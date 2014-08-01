@@ -1,0 +1,21 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+[object, uuid(33378BCC-EF48-4361-9467-0816C0A7841A), oleautomation, helpstring("FileAssociation Extend Interface")]
+interface IFileAssociationExt : IUnknown
+{
+}
+
+[uuid(B720C1E7-D128-4F81-8308-CB0B6AEF4F6B), version(1.0), helpstring("FileAssociatioExtend Service")]
+library FileAssociatioExtendService
+{
+    importlib("stdole32.tlb");
+    importlib("stdole2.tlb");
+
+    [uuid(910B13DC-7EF9-4F5F-A7FE-C095A92425C6), helpstring("FileAssociation Extend Class"), appobject]
+    coclass FileAssociationExt
+    {
+        [default] interface IFileAssociationExt;
+    };
+};

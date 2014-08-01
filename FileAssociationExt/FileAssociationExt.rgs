@@ -1,0 +1,25 @@
+HKCR
+{
+    NoRemove CLSID
+    {
+        ForceRemove {910B13DC-7EF9-4F5F-A7FE-C095A92425C6} = s 'FileAssociationExtend'
+        {
+            InprocServer32 = s '%MODULE%'
+            {
+                val ThreadingModel = s 'Apartment'
+            }
+            TypeLib = s '{B720C1E7-D128-4F81-8308-CB0B6AEF4F6B}'
+        }
+    }
+
+    NoRemove *
+    {
+        NoRemove shellex
+        {
+            NoRemove ContextMenuHandlers
+            {
+                ForceRemove 'FileAssociationExtend' = s '{910B13DC-7EF9-4F5F-A7FE-C095A92425C6}'
+            }
+        }
+    }
+}

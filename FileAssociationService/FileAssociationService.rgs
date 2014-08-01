@@ -1,0 +1,11 @@
+HKCR
+{
+    NoRemove CLSID
+    {
+        ForceRemove {C22B6E81-1432-4DAF-9B98-4C8AEA2F8ACF} = s 'FileAssociationHelper'
+        {
+            LocalServer32 = s '%MODULE%'
+            TypeLib = s '{C07DAF7C-F96B-42ED-BFD8-B58CCE60D8EC}'
+        }
+    }
+}
